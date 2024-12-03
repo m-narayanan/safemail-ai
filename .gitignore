@@ -1,0 +1,9 @@
+.vscode
+venv
+.ipynb_checkpoints
+Spam Detector - Copy.ipynb
+spam_data.csv
+spam_data_set.csv
+Spam Detector - ai.py
+optimized_vectorizer.pkl
+optimized_spam.pkl
