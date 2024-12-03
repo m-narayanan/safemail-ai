@@ -40,7 +40,7 @@ Welcome to SafeMail AI, your personal digital bouncer that keeps those pesky spa
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/safemail-ai.git
+git clone https://github.com/m-narayanan/safemail-ai.git
 
 # Navigate to project directory
 cd safemail-ai
