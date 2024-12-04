@@ -13,14 +13,14 @@ st.set_page_config(
 # Load the model and vectorizer
 @st.cache_resource
 def load_model():
-    model = pickle.load(open('spam.pkl', 'rb'))
+    model = pickle.load(open('spam_nb.pkl', 'rb'))
     cv = pickle.load(open('vectorizer.pkl', 'rb'))
     return model, cv
 
 model, cv = load_model()
 
-# Model accuracy
-MODEL_ACCURACY = 0.9777
+# Model accuracy for Multinomial Naive Bayes
+MODEL_ACCURACY = 0.98  # Updated accuracy
 
 # Initialize session state
 def initialize_session_state():
@@ -137,22 +137,21 @@ def main():
                     explanation = "This email looks safe to open."
 
                 # Display result
-                st.markdown(f"<div class='{result_class}'>{result_message}</div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='{ result_class}'>{result_message}</div>", unsafe_allow_html=True)
                 st.write(f"**Confidence:** {confidence:.2%}")
                 st.write(explanation)
-
 
         # Only show feedback if a prediction has been made
         if st.session_state.last_prediction is not None:
             # Feedback mechanism
             st.markdown("### Feedback")
             feedback = st.radio(
-				"Was our spam detection accurate?", 
-				["Select", "Yes", "No", "Unsure"], 
-				horizontal=True,
-				key="feedback_radio",  # Ensure this key is consistent
-				index=0  # This ensures "Select" is the default selected option
-			)
+                "Was our spam detection accurate?", 
+                ["Select", "Yes", "No", "Unsure"], 
+                horizontal=True,
+                key="feedback_radio",  # Ensure this key is consistent
+                index=0  # This ensures "Select" is the default selected option
+            )
 
             # Handle feedback
             if feedback != "Select" and not st.session_state.feedback_given:
@@ -174,7 +173,7 @@ def main():
         st.title("Settings")
         st.write("🚧 This feature is under future enhancement.")
         
-	# Footer with additional information
+    # Footer with additional information
     st.sidebar.markdown("---")
     st.sidebar.write("### About")
     st.sidebar.write("This application uses machine learning to classify emails as spam or ham.")
