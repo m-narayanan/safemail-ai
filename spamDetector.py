@@ -17,12 +17,8 @@ def load_model():
 
 model, cv = load_model()
 
-<<<<<<< HEAD
 # Model accuracy for Multinomial Naive Bayes
 MODEL_ACCURACY = 0.98  # Updated accuracy
-=======
-MODEL_ACCURACY = 0.9777
->>>>>>> 264f3e14105bb93c9a0fa10129f125d2e788cf13
 
 def initialize_session_state():
     if 'conversation_history' not in st.session_state:
@@ -134,21 +130,12 @@ def main():
             # Feedback 
             st.markdown("### Feedback")
             feedback = st.radio(
-<<<<<<< HEAD
                 "Was our spam detection accurate?", 
                 ["Select", "Yes", "No", "Unsure"], 
                 horizontal=True,
                 key="feedback_radio",  # Ensure this key is consistent
                 index=0  # This ensures "Select" is the default selected option
             )
-=======
-				"Was our spam detection accurate?", 
-				["Select", "Yes", "No", "Unsure"], 
-				horizontal=True,
-				key="feedback_radio",  
-				index=0  
-			)
->>>>>>> 264f3e14105bb93c9a0fa10129f125d2e788cf13
 
             if feedback != "Select" and not st.session_state.feedback_given:
                 st.session_state.feedback_given = True
@@ -167,11 +154,7 @@ def main():
         st.title("Settings")
         st.write("🚧 This feature is under future enhancement.")
         
-<<<<<<< HEAD
     # Footer with additional information
-=======
-	# Footer 
->>>>>>> 264f3e14105bb93c9a0fa10129f125d2e788cf13
     st.sidebar.markdown("---")
     st.sidebar.write("### About")
     st.sidebar.write("This application uses machine learning to classify emails as spam or ham.")
