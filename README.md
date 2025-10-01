@@ -10,10 +10,9 @@ Welcome to SafeMail AI, your personal digital bouncer that keeps those pesky spa
 
 ##  Features
 
-- **High-Accuracy Spam Detection**: Boasting a 98% accuracy rate! 🎯
+- **High-Accuracy Spam Detection**: Boasting a 98% accuracy�
 - **Interactive Web Interface**: Super clean, intuitive Streamlit design
 - **Real-Time Email Analysis**: Instant spam detection at your fingertips
-- **User Feedback Mechanism**: Help improve the model with your input
 
 ##  Tech Stack
 
@@ -27,7 +26,6 @@ Welcome to SafeMail AI, your personal digital bouncer that keeps those pesky spa
 1. Paste your suspicious email text
 2. Click "Detect Spam"
 3. Get an instant classification with confidence percentage
-4. Provide feedback to help train the model
 
 ##  Quick Start
 
